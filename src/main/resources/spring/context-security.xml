@@ -29,17 +29,8 @@
 			<user-service>
 				<user name="rod" 
 			      password="864acff7515e4e419d4266e474ea14a889dce340784038b704a30453e01245eed374f881f3df8e1e" 
-			      authorities="supervisor, teller, user" />
-			  	<user name="dianne" 
-			      password="9992e040d32b6a688ff45b6e53fd0f5f1689c754ecf638cce5f09aa57a68be3c6dae699091e58324" 
-			      authorities="teller, user" />
-			  	<user name="scott" 
-			      password="ab8d9744fa4dd5cee6eb692406fd29564267bad7c606837a70c44583b72e5684ec5f55c9dea869a5"
 			      authorities="user" />
-			  	<user name="peter" 
-			      password="e446d30fcb00dc48d7e9fac49c2fec6a945171702e6822e1ec48f1ac1407902759fe30ed66a068df" 
-			      authorities="user" />
-			  	</user-service>
+			</user-service>
 		</authentication-provider>
 	</authentication-manager>
     

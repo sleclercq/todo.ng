@@ -15,11 +15,7 @@ public class AjaxAuthenticationSuccessHandler extends SimpleUrlAuthenticationSuc
 	@Override
 	public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException,
 			ServletException {
-		if ("true".equals(request.getHeader("X-Ajax-call"))) {
-            response.getWriter().print("Welcome !");
-            response.getWriter().flush();
-        } else {
-            super.onAuthenticationSuccess(request, response, authentication);
-        }
+        response.getWriter().print("Welcome !");
+        response.getWriter().flush();
 	}
 }

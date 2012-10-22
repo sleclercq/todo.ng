@@ -7,7 +7,6 @@ function LoginCtrl($scope, $routeParams, $http, $location) {
 		$http.post('j_spring_security_check', data, {
 			  headers: {
 			    'Content-Type': 'application/x-www-form-urlencoded',
-			    'X-Ajax-call':true
 			  }
 		}).
 	    success(function(data, status, headers, config) {

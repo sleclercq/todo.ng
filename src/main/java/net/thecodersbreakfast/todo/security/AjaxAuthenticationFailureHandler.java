@@ -14,10 +14,6 @@ public class AjaxAuthenticationFailureHandler extends SimpleUrlAuthenticationFai
 	@Override
 	public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response,
             AuthenticationException exception) throws IOException, ServletException{
-		if ("true".equals(request.getHeader("X-Ajax-call"))) {
-		    response.sendError(HttpServletResponse.SC_NOT_FOUND, "Wrong username or password");
-		} else {
-		    super.onAuthenticationFailure(request, response, exception);
-		}
+		response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Wrong username or password");
 	}
 }

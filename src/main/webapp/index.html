@@ -23,10 +23,10 @@
 	            <form id="userLogin" ng-submit="login()">
 	            	<input ng-model="username" type="text" class="loginforminput"/><br>
 	            	<input ng-model="password" type="password" class="loginforminput"/><br>
-	            	<input type="submit" value="Login" class="button"/>
+	            	<input type="submit" value="Login" class="button"/><br>
 	            	<span id="loginAlert"></span>
 	            </form>
-	            <span id="userInfo" hidden>Bienvenue {{username}} !</span>
+	            <div id="userInfo" hidden>Bienvenue {{username}} ! <button ng-click="logout()" type="button" class="button">Logout</button></div>
             </div>
         </div>
 
