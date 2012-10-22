@@ -2,6 +2,7 @@ package net.thecodersbreakfast.todo.web.controller;
 
 import net.thecodersbreakfast.todo.model.Todo;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -29,6 +30,7 @@ public class TodoController {
         return todoRepository.get(id);
     }
 
+    @PreAuthorize("isAuthenticated()")
     @RequestMapping(value = "/todo", method = RequestMethod.PUT)
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void create(@RequestBody Todo todo) {
