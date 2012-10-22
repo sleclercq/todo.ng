@@ -8,7 +8,8 @@
     <script src="js/libs/angular-resource-1.0.1.js"></script>
     <script src="js/app/application.js"></script>
     <script src="js/app/services.js"></script>
-    <script src="js/app/controllers.js"></script>
+	<script src="js/app/todoCtrl.js"></script>
+	<script src="js/app/loginCtrl.js"></script>    
 </head>
 <body>
 <div id="body">
@@ -17,6 +18,15 @@
 
         <div id="pageHeader">
             <h1>Todo.ng</h1>
+            <div id="userBlock" ng-controller="LoginCtrl">
+	            <form id="userLogin" ng-submit="login()">
+	            	<input ng-model="username" type="text" class="loginforminput"/><br>
+	            	<input ng-model="password" type="password" class="loginforminput"/><br>
+	            	<input type="submit" value="Login" class="button"/>
+	            	<span id="loginAlert"></span>
+	            </form>
+	            <span id="userInfo"></span>
+            </div>
         </div>
 
         <div id="pageBody">

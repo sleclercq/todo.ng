@@ -3,7 +3,7 @@
 function TodoListController($scope, $location, Todo) {
     $scope.todos = Todo.query();
     $scope.gotoTodoNewPage = function () {
-        $location.path("/todo/new")
+        $location.path("/todo/new");
     };
     $scope.deleteTodo = function (todo) {
         todo.$delete({'id':todo.id}, function () {
@@ -16,7 +16,7 @@ function TodoDetailController($scope, $routeParams, $location, Todo) {
     $scope.todo = Todo.get({id:$routeParams.id}, function (todo) {
     });
     $scope.gotoTodoListPage = function () {
-        $location.path("/")
+        $location.path("/");
     };
 }
 
@@ -27,6 +27,6 @@ function TodoNewController($scope, $location, Todo) {
         });
     };
     $scope.gotoTodoListPage = function () {
-        $location.path("/")
+        $location.path("/");
     };
 }

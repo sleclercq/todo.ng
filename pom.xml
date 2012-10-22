@@ -18,6 +18,7 @@
         <!-- Dependencies -->
         <version.spring>3.1.2.RELEASE</version.spring>
         <version.jackson>1.9.4</version.jackson>
+        <version.servlet>3.0.1</version.servlet>
     </properties>
 
     <!-- ================================================================================ -->
@@ -69,6 +70,26 @@
             <artifactId>spring-webmvc</artifactId>
             <version>${version.spring}</version>
         </dependency>
+        <dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>${version.spring}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${version.spring}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${version.spring}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${version.servlet}</version>
+		</dependency>
         <dependency>
             <groupId>org.codehaus.jackson</groupId>
             <artifactId>jackson-core-asl</artifactId>

@@ -40,9 +40,16 @@ form .formField {
     margin-bottom: 1em;
 }
 
-input[type='text'], textarea {
+.forminput {
     width: 460px;
     line-height: 1.2;
+    padding: 4px;
+    border: solid 1px #CCC;
+}
+
+.loginforminput {
+    width: 150px;
+    line-height: 1;
     padding: 4px;
     border: solid 1px #CCC;
 }
@@ -106,6 +113,14 @@ body {
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 1px #FFF inset;
     text-align: left;
+}
+
+#userBlock {
+    padding: 20px;
+    background: #EEE;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 1px #FFF inset;
+    float: right;
 }
 
 /*
