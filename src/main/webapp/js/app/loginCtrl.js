@@ -1,20 +1,7 @@
 'use strict';
 
 function LoginCtrl($scope, $routeParams, $http, $location) {
-	
-	$scope.initUserMenu = function(){
-		$http.get('rest/user/whoami')
-		.success(function(username, status, headers, config){
-			if(username!='anonymousUser'){
-				console.info("You're already logged in, welcome "+username);
-				jQuery('#userInfoUsername').html('Welcome '+username);
-				jQuery('#navItemRightLogin').hide();
-				jQuery('#navItemRightUser').show();
-				$location.path('/map');
-			}
-		});
-	};
-	
+		
 	$scope.login = function(){
 		var data = "j_username="+$scope.username+"&j_password="+$scope.password+"&submit=Login";
 		$http.post('j_spring_security_check', data, {
