@@ -20,6 +20,7 @@
         <version.jackson>1.9.4</version.jackson>
         <version.cglib>2.2.2</version.cglib>
         <version.servlet>3.0.1</version.servlet>
+        <jetty.version>9.0.0.M4</jetty.version>
     </properties>
 
     <!-- ================================================================================ -->
@@ -127,6 +128,11 @@
                     <source>${project.build.javaVersion}</source>
                     <target>${project.build.javaVersion}</target>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>${jetty.version}</version>
             </plugin>
         </plugins>
     </build>
