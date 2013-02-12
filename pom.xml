@@ -130,6 +130,7 @@
                 </configuration>
             </plugin>
             <plugin>
+                <!-- To run at a specified port : mvn clean jetty:run -Djetty.port=9090 -->
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>${jetty.version}</version>
